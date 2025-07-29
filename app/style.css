@@ -1,0 +1,172 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+html {
+  display: flex;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem; 
+  font-family: 'JetBrains Mono';
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  padding: 1.5rem;
+  margin: 0;
+  gap: 1rem;
+  height: fit-content;
+
+  background: #222;
+  color: lightgray;
+}
+
+#background {  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  
+  background: url("/public/disgaea1pc/banner.webp");
+  background-size: cover;
+  filter: brightness(75%);
+}
+
+#logo {
+  height: 3rem;
+  filter: invert(90%);
+  cursor: pointer;
+}
+
+#header {
+  display: flex;
+  position: sticky;
+  /* position: relative; */
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 1;
+  
+  top: 0.8rem;
+  right: 0.8rem;
+  left: 0.8rem;
+  padding: 1rem;
+  
+  background: #0e0e0ea8;
+  color: lightgray;
+  backdrop-filter: blur(20px);
+  border: 2px solid lightgray;
+  border-radius: 25px;
+  overflow: clip;
+}
+
+.noise {
+  position: absolute;
+  background: url("https://grainy-gradients.vercel.app/noise.svg");
+  width: 100%;
+  height: 100%;
+  left: 0;
+  opacity: 40%;
+  mix-blend-mode:soft-light;
+  z-index: -1;
+}
+
+#opened_header {
+  display: flex;
+  position: fixed;
+  /* position: absolute; */
+  /* align-items: center; */
+  gap: 0.8rem;
+  /* width: 100%; */
+  height: 30%;
+  z-index: 1;
+  
+  top: 0.8rem;
+  right: 0.8rem;
+  left: 0.8rem;
+  
+  padding: 1em;
+  
+  background: #0e0e0ea8;
+  color: lightgray;
+  backdrop-filter: blur(20px);
+  border: 2px solid lightgray;
+  border-radius: 25px;
+  overflow: clip;
+}
+
+#nav_button, .header_button {
+  display: flex;
+  font-size: 24px;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border-radius: 15px;
+  color: lightgray;
+  border: none;
+  /* border: 2px solid lightgray; */
+}
+
+#nav_button:hover, .header_button:hover {
+  background: #ffffff20;
+}
+
+.header_text {
+  flex-grow: 1;
+  font-family: 'JetBrains Mono';
+}
+
+#header_socials {
+  display: flex;
+  justify-self: right;
+  font-size: 24px;
+  /* gap: 0.3rem; */
+  margin-right: 0.7rem;
+}
+
+#header_socials a {
+  width: 2.8rem;
+  height: 2.8rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+#footer {
+  display: block;
+  /* position: absolute; */
+  bottom: 0;
+  font-family: 'JetBrains Mono';
+  align-self: center;
+}
+
+#header_title {
+  padding-left: 0.5rem;
+}
+
+#content {
+  display: block;
+  overflow: hidden;
+
+  flex-grow: 1;
+
+  margin: 0 2rem;
+  min-height: calc(100vh - 11.8rem);
+
+  background: #0e0e0ea8;
+  backdrop-filter: blur(20px);
+  border: 2px solid lightgray;
+  border-radius: 25px;
+}
+
+#page {
+  padding: 0 3em 10em 3em;
+}
+
+.markdown-body {
+  background: none;
+}

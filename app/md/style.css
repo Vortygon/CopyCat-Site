@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+@import url("markdown.css");
+
+/* * {
+  background: #2a2a2a;
+  color: whitesmoke;
+} */
+
+* {
+  scroll-behavior: smooth;
+}
+
+.cc_logo {
+  background: none;
+  filter: invert(100%);
+}
+
+.links {
+  font-size: 18px; 
+  padding-right: 5px;
+}
+
+.warning {
+  background-color: rgba(255,155,0,0.3); 
+  border: solid 1px goldenrod; 
+}
+
+.tip {
+  background-color: rgba(100, 149, 237, 0.3); 
+  border: solid 1px rgb(100, 149, 237); 
+}
+
+.tip, .warning {
+  border-radius: 8px; padding: 15px; 
+  margin: 1rem 0.5rem;
+}
+
+.achievements {
+  display:flex;
+  flex-direction:column; 
+  gap:8px;
+  margin-inline: 0.5rem;
+  
+}
+
+.ach_row {
+  display: flex; 
+  gap:8px;
+}
+
+.ach_row img {
+  height: 64px;
+  width: 64px;
+}
+
+.ach_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  gap: 1px;
+  padding-left: 5px;
+  padding-bottom: 2.5px;
+  margin: 0;
+}
+
+.ach_desc h3 {
+  margin: 0;
+  padding-bottom: 3px;
+}

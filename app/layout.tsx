@@ -34,7 +34,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="stylesheet" href="style.css" />
-        <script src="https://unpkg.com/htmx.org@latest" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 

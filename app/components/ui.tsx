@@ -19,13 +19,13 @@ function Logo() {
   )
 }
 
-export function Header({title}:any) {
+export function Header() {
   return(
     <div id="header">
       <NoisePattern />
       <HeaderButton />
       <Logo />
-      <div id="header_title">{title}</div>
+      <div id="header_title">CopyCat</div>
       <Socials />
     </div>
   )

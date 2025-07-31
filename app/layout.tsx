@@ -22,11 +22,18 @@ const jetBrainsMonoNerd = localFont({src: '../public/fonts/JetBrainsMonoNerd.ttf
 //   description: "Переводы игр команды CopyCat",
 // };
 
-export async function generateMetadata(): Promise<Metadata> {
-  const title = "Перевод Disgaea PC";
+export const MdMetadata = {
+  title: "CopyCat - перевод игр",
+  description: "Перевод игр от команды CopyCat",
+  thumbnail: '/games/disgaea1pc/banner.webp'
+}
 
-  const description =
-    "Перевод Disgaea PC от команды CopyCat";
+export async function generateMetadata(): Promise<Metadata> {
+  // const title = "CopyCat - перевод игр";
+  const title = MdMetadata.title;
+
+  // const description = "Перевод игр от команды CopyCat";
+  const description = MdMetadata.description;
 
   return {
     metadataBase: new URL(baseUrl),
@@ -39,11 +46,13 @@ export async function generateMetadata(): Promise<Metadata> {
       url: baseUrl,
       images: [
         {
-          url: Thumbnail,
-          secureUrl: Thumbnail,
+          // url: Thumbnail,
+          // secureUrl: Thumbnail,
+          url: MdMetadata.thumbnail,
+          secureUrl: MdMetadata.thumbnail,
           width: 1920,
           height: 768,
-          alt: "DisgaeaPC",
+          alt: "CopyCat",
         },
       ],
       type: "website",

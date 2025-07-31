@@ -6,6 +6,9 @@ import { Suspense } from "react";
 import { NoisePattern } from "./components/graphics";
 import { Footer, Header } from "./components/ui";
 import "./style.css"
+import { Thumbnail } from "./resources";
+
+const baseUrl = "https://copycat.vortygon.space/"
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -14,10 +17,41 @@ const jetBrainsMono = JetBrains_Mono({
 
 const jetBrainsMonoNerd = localFont({src: '../public/fonts/JetBrainsMonoNerd.ttf'})
 
-export const metadata: Metadata = {
-  title: "CopyCat",
-  description: "Переводы игр команды CopyCat",
-};
+// export const metadata: Metadata = {
+//   title: "CopyCat",
+//   description: "Переводы игр команды CopyCat",
+// };
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "Перевод Disgaea PC";
+
+  const description =
+    "Перевод Disgaea PC от команды CopyCat";
+
+  return {
+    metadataBase: new URL(baseUrl),
+    title,
+    description,
+    themeColor: "black",
+    openGraph: {
+      title,
+      description,
+      url: baseUrl,
+      images: [
+        {
+          url: Thumbnail,
+          secureUrl: Thumbnail,
+          width: 1920,
+          height: 768,
+          alt: "DisgaeaPC",
+        },
+      ],
+      type: "website",
+      siteName: "CopyCat",
+    },
+  };
+}
+
 
 export default function RootLayout({
   children,
@@ -33,7 +67,7 @@ export default function RootLayout({
 
         <div id="background" />
 
-        <Header title={metadata.title} />
+        <Header />
 
         <div id="content">
           <NoisePattern />

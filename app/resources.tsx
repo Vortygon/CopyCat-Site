@@ -1,0 +1,1 @@
+export const Thumbnail = '/games/disgaea1pc/banner.webp'

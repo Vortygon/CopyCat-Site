@@ -33,7 +33,7 @@ body {
   overflow: hidden;
   z-index: -1;
   
-  background: url("/games/disgaea1pc/banner.webp");
+  background: url("/games/disgaea1pc/background.webp");
   background-size: cover;
   filter: brightness(75%);
 }

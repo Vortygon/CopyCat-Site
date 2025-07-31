@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 function HeaderButton() {
   return (
-    <Link href="/translations/disgaea1pc">
+    <Link href="/translations/disgaea1pc" replace={true}>
       <button id="nav_button"><i className="nf nf-md-menu" /></button>
     </Link>
   )
@@ -19,7 +19,7 @@ function Logo() {
   )
 }
 
-export function Header({title}:{title:any}) {
+export function Header({title}:any) {
   return(
     <div id="header">
       <NoisePattern />

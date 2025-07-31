@@ -22,7 +22,7 @@ const jetBrainsMonoNerd = localFont({src: '../public/fonts/JetBrainsMonoNerd.ttf
 //   description: "Переводы игр команды CopyCat",
 // };
 
-export const MdMetadata = {
+const MdMetadata = {
   title: "CopyCat - перевод игр",
   description: "Перевод игр от команды CopyCat",
   thumbnail: '/games/disgaea1pc/banner.webp'

@@ -6,7 +6,7 @@ interface SocialLink {
 }
 
 export default async function Socials() {
-  const file = await fs.readFile(path.join(process.cwd(), '/app/socials.json'), 'utf8')
+  const file = await fs.readFile(path.join(process.cwd(), '/socials.json'), 'utf8')
   // const file = await fs.readFile(path.resolve('app/socials.json'), 'utf8')
   // const data = await fetch("localhost:3000/socials.json")
   // const file = await data.json()

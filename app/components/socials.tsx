@@ -1,11 +1,13 @@
 import { promises as fs } from 'fs';
+import path from 'path';
 
 interface SocialLink {
   name: string; url: string; icon: string;
 }
 
 export default async function Socials() {
-  const file = await fs.readFile(process.cwd() + '/app/socials.json', 'utf8')
+  // const file = await fs.readFile(process.cwd() + '/app/socials.json', 'utf8')
+  const file = await fs.readFile(path.resolve('app/socials.json'), 'utf8')
   const socialLinks: SocialLink[] = await JSON.parse(file)
 
   return (

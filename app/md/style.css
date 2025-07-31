@@ -41,7 +41,6 @@
   flex-direction:column; 
   gap:8px;
   margin-inline: 0.5rem;
-  
 }
 
 .ach_row {
@@ -54,18 +53,16 @@
   width: 64px;
 }
 
+.ach_row strong {
+  font-size: large;
+}
+
 .ach_desc {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   
-  gap: 1px;
   padding-left: 5px;
   padding-bottom: 2.5px;
   margin: 0;
-}
-
-.ach_desc h3 {
-  margin: 0;
-  padding-bottom: 3px;
 }

@@ -119,11 +119,6 @@ body {
   background: #ffffff20;
 }
 
-.header_text {
-  flex-grow: 1;
-  font-family: 'JetBrains Mono';
-}
-
 #header_socials {
   display: flex;
   justify-self: right;
@@ -168,7 +163,8 @@ body {
 }
 
 #page {
-  padding: 0 3em 10em 3em;
+  /* padding: 0 3em 10em 3em; */
+  padding: 3em;
 }
 
 .markdown-body {

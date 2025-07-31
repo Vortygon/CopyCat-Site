@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./style.css"
-import Link from "next/link";
-import Socials from "./components/socials";
 import localFont from "next/font/local";
+import { Suspense } from "react";
+import { NoisePattern } from "./components/graphics";
+import { Footer, Header } from "./components/ui";
+import "./style.css"
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -17,12 +19,6 @@ export const metadata: Metadata = {
   description: "Переводы игр команды CopyCat",
 };
 
-function NoisePattern() {
-  return (
-    <div className="noise" />
-  )
-}
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,31 +26,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <link rel="stylesheet" href="style.css" />
-      </head>
+      </head> */}
       <body className={`${jetBrainsMono.variable} ${jetBrainsMonoNerd.className} antialiased`}>
 
         <div id="background" />
 
-        <div id="header">
-          <NoisePattern />
-          <Link href="/translations/disgaea1pc">
-            <button id="nav_button"><i className="nf nf-md-menu" /></button>
-          </Link>
-          <Link href="/">
-            <img src="/CopyCat_logo.svg" id="logo" />
-          </Link>
-          <div id="header_title"><>{metadata.title}</></div>
-          <Socials />
-        </div>
+        <Header title={metadata.title} />
 
         <div id="content">
           <NoisePattern />
-          <div id="page">{children}</div>
+          <div id="page">
+            <Suspense fallback={<p>Загрузка</p>}>{children}</Suspense>
+          </div>
         </div>
 
-        <div id="footer">CopyCat ©️ 2024</div> 
+        <Footer />
 
       </body>
     </html>

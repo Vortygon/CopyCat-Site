@@ -19,7 +19,7 @@ function Logo() {
   )
 }
 
-export function Header({ title }:any) {
+export function Header({title}:{title:any}) {
   return(
     <div id="header">
       <NoisePattern />

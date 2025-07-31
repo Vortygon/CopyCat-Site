@@ -3,11 +3,14 @@ import { JetBrains_Mono } from "next/font/google";
 import "./style.css"
 import Link from "next/link";
 import Socials from "./components/socials";
+import localFont from "next/font/local";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
+
+const jetBrainsMonoNerd = localFont({src: '../public/fonts/JetBrainsMonoNerd.ttf'})
 
 export const metadata: Metadata = {
   title: "CopyCat",
@@ -30,7 +33,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="style.css" />
       </head>
-      <body className={`${jetBrainsMono.variable} antialiased`}>
+      <body className={`${jetBrainsMono.variable} ${jetBrainsMonoNerd.className} antialiased`}>
 
         <div id="background" />
 

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/* @import "tailwindcss"; */
 @import "https://www.nerdfonts.com/assets/css/webfont.css";
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
@@ -7,7 +7,7 @@ html {
   display: flex;
   scroll-behavior: smooth;
   scroll-padding-top: 3rem; 
-  font-family: 'JetBrains Mono';
+  font-family: 'JetBrains Mono', 'JetBrainsMono Nerd Mono';
 }
 
 body {

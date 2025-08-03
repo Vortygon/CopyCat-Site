@@ -33,6 +33,7 @@ export function Header() {
 
 export function Footer() {
   return(
-    <div id="footer">CopyCat ©️ 2025</div> 
+    // <div id="footer">CopyCat ©️ 2025</div> 
+    <footer id="footer">CopyCat ©️ 2025</footer> 
   )
 }
